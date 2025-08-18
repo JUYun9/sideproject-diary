@@ -100,20 +100,24 @@ public class Entry {
 
 ### 일기 목록
 `localhost:8080/entries`
-<img width="1000" height="150" alt="image" src="https://github.com/user-attachments/assets/27690f8a-b041-4172-8648-a7244cbe42ce" />
+
+<img width="500" height="150" alt="image" src="https://github.com/user-attachments/assets/1e0fd68a-6701-4835-a5d6-314fe0b1f050" />
+
 
 ### 등록 화면
-<img width="1000" height="200" alt="image" src="https://github.com/user-attachments/assets/6c52652c-971e-42f5-bcae-c1539d12eb97" />
+<img width="500" height="200" alt="image" src="https://github.com/user-attachments/assets/8d749295-045f-418a-acc4-a8eb5436d328" />
 
 
 ### 상세 화면
-제목 클릭 -> 상세 화면 조회
-<img width="1000" height="200" alt="image" src="https://github.com/user-attachments/assets/6cd52e51-7a90-4969-a7d5-e50f01010af2" />
+<img width="500" height="200" alt="image" src="https://github.com/user-attachments/assets/b4f7670b-8c94-4a71-afcb-1fe439bc173a" />
+
 
 ### 수정 화면
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/fac1e755-485b-4229-8db3-1f5d8d87656c" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/df911caf-8baa-4597-98c5-954aae75fb9d" />
+
 
 ### 삭제 화면
-<img width="1000" height="200" alt="image" src="https://github.com/user-attachments/assets/5898e9ad-973c-4024-a0d5-f5a4f39d9642" />
+<img width="500" height="200" alt="image" src="https://github.com/user-attachments/assets/8f40ae9c-c480-4479-930f-0ec2a6e6ba3c" />
+
 
 
