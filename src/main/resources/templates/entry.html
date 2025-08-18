@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <!-- 로컬 부트스트랩 CSS: Spring Boot 정적 리소스 매핑(/css/...) -->
+  <link rel="stylesheet"
+        th:href="@{/css/bootstrap.min.css}"
+        href="/css/bootstrap.min.css">
+
+  <style>
+    .content-body { white-space: pre-wrap; line-height: 1.7; }
+  </style>
+</head>
+<body class="bg-light">
+<main class="container py-4">
+
+  <!-- 상단 바 -->
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <div class="d-flex align-items-center gap-3">
+      <h1 class="h4 m-0">일기 상세</h1>
+    </div>
+    <div class="d-flex gap-2">
+      <a class="btn btn-primary" th:href="@{/entries/{id}/edit (id=${entry.id})}" href="/entries/1/edit">수정</a>
+      <form th:action="@{/entries/{id}(id=${entry.id})}" method="post" class="m-0">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" class="btn btn-outline-danger"
+                onclick="return confirm('정말 삭제할까요?');">삭제</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 상세 카드 -->
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-start mb-2">
+        <h2 class="h4 mb-1" th:text="${entry.title}">제목 예시입니다</h2>
+        <span class="text-nowrap text-muted small" th:text="${#temporals.format(entry.localDateTime, 'yyyy-MM-dd HH:mm')}">2025-08-15 12:34</span>
+      </div>
+
+      <div class="text-muted small mb-3">
+        <span>번호</span>
+        <span class="badge text-bg-light" th:text="${entry.id}">1</span>
+      </div>
+
+      <hr class="my-3">
+
+      <div class="content-body fs-5" th:text="${entry.content}">
+        여기에 일기 본문이 표시됩니다. 줄바꿈도 유지됩니다.
+        예) 오늘은 날씨가 아주 좋았다.
+      </div>
+    </div>
+  </div>
+
+  <!-- 하단 액션 -->
+  <div class="d-flex justify-content-between mt-4">
+    <a class="btn btn-outline-secondary" th:href="@{/entries}" href="/entries">← 목록으로</a>
+    <a class="btn btn-success" th:href="@{/entries/new}" href="/entries/new">새 일기</a>
+  </div>
+
+</main>
+
+<!-- 부트스트랩 JS는 CDN 그대로 사용해도 됩니다 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
