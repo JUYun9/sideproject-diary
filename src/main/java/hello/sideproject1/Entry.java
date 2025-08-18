@@ -10,10 +10,10 @@ import java.time.LocalDateTime;
 @Setter
 public class Entry {
 
-    Long id;
-    String title;
-    String content;
-    LocalDateTime localDateTime;
+    private Long id;
+    private String title;
+    private String content;
+    private LocalDateTime localDateTime;
 
     public Entry() {
 

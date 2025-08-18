@@ -27,7 +27,7 @@ public class EntryController {
     public String create(@ModelAttribute Entry entry, RedirectAttributes redirectAttributes) {
         Entry saveEntry = entryRepository.save(entry);
 
-        redirectAttributes.addAttribute("entryId", entry.getId());
+        redirectAttributes.addAttribute("entryId", saveEntry.getId());
 
         return "redirect:/entries/{entryId}";
     }
@@ -43,9 +43,7 @@ public class EntryController {
     public String saveEdit(@PathVariable("id") Long id, @ModelAttribute Entry updateEntry) {
         Entry currentEntry = entryRepository.findEntry(id);
 
-        currentEntry.setTitle(updateEntry.getTitle());
-        currentEntry.setContent(updateEntry.getContent());
-        currentEntry.setLocalDateTime(LocalDateTime.now());
+        entryRepository.edit(id, currentEntry);
 
         return "redirect:/entries/{id}";
     }
