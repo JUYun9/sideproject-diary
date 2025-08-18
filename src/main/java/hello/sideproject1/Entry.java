@@ -16,7 +16,6 @@ public class Entry {
     private LocalDateTime localDateTime;
 
     public Entry() {
-
     }
 
     public Entry(String title, String content, LocalDateTime localDateTime) {

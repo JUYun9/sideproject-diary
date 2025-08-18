@@ -20,7 +20,7 @@ public class EntryController {
     @GetMapping("/new")
     public String newForm(Model model) {
         model.addAttribute("entry", new Entry());
-        return "/addForm";
+        return "addForm";
     }
 
     @PostMapping
@@ -36,7 +36,7 @@ public class EntryController {
     public String detail(@PathVariable("id") Long id, Model model) {
         Entry entry = entryRepository.findEntry(id);
         model.addAttribute("entry", entry);
-        return "/entry";
+        return "entry";
     }
 
     @PutMapping("/{id}")
@@ -52,14 +52,14 @@ public class EntryController {
     public String edit(@PathVariable("id") Long id, Model model) {
         Entry entry = entryRepository.findEntry(id);
         model.addAttribute("entry", entry);
-        return "/edit";
+        return "edit";
     }
 
     @GetMapping
     public String list(Model model) {
         List<Entry> entries = entryRepository.findAll();
         model.addAttribute("entries", entries);
-        return "/list";
+        return "list";
     }
 
     @DeleteMapping("/{id}")
