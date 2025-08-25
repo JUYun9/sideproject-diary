@@ -96,28 +96,7 @@ public class Entry {
 
 - `edit.html`: 수정 폼 (th:action="@{/entries/{id}(id=${entry.id})}" + _method=PUT)
 
-## 예시
-
-### 일기 목록
-`localhost:8080/entries`
-
-<img width="500" height="150" alt="image" src="https://github.com/user-attachments/assets/1e0fd68a-6701-4835-a5d6-314fe0b1f050" />
-
-
-### 등록 화면
-<img width="500" height="200" alt="image" src="https://github.com/user-attachments/assets/8d749295-045f-418a-acc4-a8eb5436d328" />
-
-
-### 상세 화면
-<img width="500" height="200" alt="image" src="https://github.com/user-attachments/assets/b4f7670b-8c94-4a71-afcb-1fe439bc173a" />
-
-
-### 수정 화면
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/df911caf-8baa-4597-98c5-954aae75fb9d" />
-
-
-### 삭제 화면
-<img width="500" height="200" alt="image" src="https://github.com/user-attachments/assets/8f40ae9c-c480-4479-930f-0ec2a6e6ba3c" />
-
+## 추가 설명
+[https://velog.io/@king__/posts](https://velog.io/@king__/CRUD%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%B2%AB-%EB%AF%B8%EB%8B%88-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B8%B0%EB%A1%9D)
 
 
