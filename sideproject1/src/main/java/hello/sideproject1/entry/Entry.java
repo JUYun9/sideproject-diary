@@ -1,4 +1,4 @@
-package hello.sideproject1;
+package hello.sideproject1.entry;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -32,4 +32,9 @@ public class Entry {
     @LastModifiedDate
     @Column(nullable = false)
     private LocalDateTime updatedAt;
+
+    public Entry(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
